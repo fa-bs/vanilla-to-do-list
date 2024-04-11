@@ -1,0 +1,212 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
+
+@keyframes inputAttn {
+    from {
+        background-color: #f24d6e;
+    }
+}
+
+@keyframes refreshItens {
+    from {
+        opacity: 0;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #312c2b;
+    color: #c4c4c4;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 95vw;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+input {
+    height: 60px;
+    flex: 70%;
+    padding-left: 30px;
+    font-size: 1.2rem;
+    border: .7px solid #7be7de;
+    color: #312c2b;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+input::placeholder {
+    opacity: .3;
+}
+
+button.btn-add {
+    cursor: pointer;
+    height: 60px;
+    flex: 15%;
+    border: none;
+    background-color: #7be7de;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn-add:hover {
+    transition: .5s ease;
+    background-color: #be7be7;
+}
+
+button.btn-save {
+    cursor: pointer;
+    height: 60px;
+    flex: 15%;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #8dc26f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn-save:hover {
+    transition: .5s ease;
+    background-color: #be7be7;
+}
+
+
+.main {
+    width: 85vw;
+    max-width: 890px;
+    margin: 20px auto;
+    list-style: none;
+    padding: 0;
+}
+
+.main li {
+    display: flex;
+    flex-flow: column;
+}
+
+.date {
+    align-self: flex-start;
+    font-size: .7rem;
+    margin: 5px;
+    opacity: 0;
+}
+
+.item {
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin: 5px auto;
+    padding: 10px;
+    background-color: #312c2b;
+    border: 1px solid #a8a8a8;
+    border-radius: 10px;
+}
+
+.item-text {
+    flex: 70%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.item-icon {
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+button.btn-delete {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-top: .1px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f24d6e;
+    float: right;
+}
+
+.item-done {
+    background-color: #23212c;
+}
+
+.item-done .item-icon {
+    color: #8dc26f;
+}
+
+.item-done .item-text {
+    color: #716c6b;
+    text-decoration: line-through;
+}
+
+.fade-in {
+    animation: fadeIn .5s ease var(--delay, 0s) forwards;
+}
+
+.fade-out {
+    animation: fadeOut .5s ease forwards;
+}
+
+.input-attn {
+    animation: inputAttn 1s ease;
+}
+
+.refresh-itens {
+    animation: refreshItens 1s ease;
+}
+
+@media screen and (max-width: 576px) {
+    .item-icon {
+        font-size: 4rem;
+    }
+
+    button.btn-delete {
+        flex: 1 0 64px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .item-text {
+        font-size: 1.3rem;
+    }
+}
