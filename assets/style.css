@@ -117,12 +117,13 @@ button.btn-save {
 .main li {
     display: flex;
     flex-flow: column;
+    margin-bottom: 13px;
 }
 
 .date {
     align-self: flex-start;
     font-size: .7rem;
-    margin: 5px;
+    margin: 3px;
     opacity: 0;
 }
 
