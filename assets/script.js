@@ -26,7 +26,9 @@ function addTask() {
         <div class="item-icon" onclick="checkTask(${counter})"><i id="icon-${counter}" class="bi bi-circle"></i></div>
         <button class="btn-delete" onclick="deleteTask(${counter})"></i></button>
         </div>
-        <small style="--delay: .2s" class="date fade-in">${date.toLocaleDateString("pt-BR")} - ${date.toLocaleTimeString()} </small>
+        <small style="--delay: .2s" class="date fade-in">
+        ${date.toDateString()} • ${date.toLocaleTimeString()}
+        </small>
     `
 
         main.prepend(newItem)
@@ -79,7 +81,8 @@ function deleteTask(id) {
             msg.classList.replace("fade-out", "fade-in")
         }
     }, 900)
-    input.focus()
+
+    screen.width > 375 && input.focus()
 }
 
 //save in localStorage

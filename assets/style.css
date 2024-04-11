@@ -194,13 +194,12 @@ button.btn-delete {
 
 @media screen and (max-width: 576px) {
     .item-icon {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     button.btn-delete {
-        flex: 1 0 64px;
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
         margin: 3px;
     }
 
