@@ -24,7 +24,7 @@ function addTask() {
         newItem.innerHTML = `<div id="item-${counter}" class="item fade-in">
         <div class="item-text">${input.value}</div>
         <div class="item-icon" onclick="checkTask(${counter})"><i id="icon-${counter}" class="bi bi-circle"></i></div>
-        <button class="btn-delete" onclick="deleteTask(${counter})"></i></button>
+        <div class="btn-delete" onclick="deleteTask(${counter})"><i class="bi bi-circle-fill"></i></div>
         </div>
         <small style="--delay: .2s" class="date fade-in">
         ${date.toDateString()} • ${date.toLocaleTimeString()}

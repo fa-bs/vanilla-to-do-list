@@ -153,15 +153,13 @@ button.btn-save {
     font-size: 1rem;
 }
 
-button.btn-delete {
+.btn-delete {
     cursor: pointer;
-    width: 16px;
-    height: 16px;
-    margin: 1px;
     border: none;
-    border-radius: 50%;
-    background-color: #f24d6e;
-    float: right;
+    font-size: 1rem;
+    color: #f24d6e;
+
+
 }
 
 .item-done {
@@ -198,10 +196,8 @@ button.btn-delete {
         font-size: 2rem;
     }
 
-    button.btn-delete {
-        width: 32px;
-        height: 32px;
-        margin: 3px;
+    .btn-delete {
+        font-size: 2rem;
     }
 
     .item-text {
