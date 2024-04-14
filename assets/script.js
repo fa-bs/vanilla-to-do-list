@@ -79,6 +79,7 @@ function deleteTask(id) {
         }, 700);
         if (main.childNodes.length == 0) {
             msg.classList.replace("fade-out", "fade-in")
+            input.focus()
         }
     }, 900)
 

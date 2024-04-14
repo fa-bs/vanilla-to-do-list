@@ -56,7 +56,6 @@ header {
 input {
     height: 60px;
     flex: 70%;
-    flex-shrink: 1;
     padding-left: 30px;
     font-size: 1.2rem;
     border: .7px solid #7be7de;
@@ -205,8 +204,8 @@ button.btn-save {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
     input {
-        width: 50px;
+        width: 200px;
     }
 }
