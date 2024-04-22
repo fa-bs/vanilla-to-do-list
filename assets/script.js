@@ -3,7 +3,7 @@ const input = document.querySelector(".input");
 const btnAdd = document.querySelector(".btn-add");
 const btnSave = document.querySelector(".btn-save");
 const msg = document.querySelector(".msg")
-let counter = 0;
+// let counter = 0;
 
 //check localStorage
 if (localStorage.getItem('myList')) {
@@ -17,14 +17,16 @@ if (localStorage.getItem('myList')) {
 
 function addTask() {
     if (input.value) {
-        counter++;
+        // counter++;
         const date = new Date()
+        const dateId = date.getTime()
+        console.log(dateId);
         const newItem = document.createElement("li")
-        newItem.setAttribute("id", counter)
-        newItem.innerHTML = `<div id="item-${counter}" class="item fade-in">
+        newItem.setAttribute("id", dateId)
+        newItem.innerHTML = `<div id="item-${dateId}" class="item fade-in">
         <div class="item-text">${input.value}</div>
-        <div class="item-icon" onclick="checkTask(${counter})"><i id="icon-${counter}" class="bi bi-circle"></i></div>
-        <div class="btn-delete" onclick="deleteTask(${counter})"><i class="bi bi-circle-fill"></i></div>
+        <div class="item-icon" onclick="checkTask(${dateId})"><i id="icon-${dateId}" class="bi bi-circle"></i></div>
+        <div class="btn-delete" onclick="deleteTask(${dateId})"><i class="bi bi-circle-fill"></i></div>
         </div>
         <small style="--delay: .2s" class="date fade-in">
         ${date.toDateString()} • ${date.toLocaleTimeString()}
