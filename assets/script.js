@@ -62,13 +62,14 @@ function checkTask(id) {
     const icon = document.getElementById("icon-" + id)
     item.classList.toggle("item-done")
 
-
     li.parentNode.appendChild(li)
     if (icon.classList.contains("bi-check-circle-fill")
     ) li.parentNode.prepend(li)
 
     icon.classList.toggle("bi-circle")
     icon.classList.toggle("bi-check-circle-fill")
+
+    if (switcher.checked) localStorage.setItem('myList', JSON.stringify(main.innerHTML))
 }
 
 function deleteTask(id) {
