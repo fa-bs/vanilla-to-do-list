@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Vanilla.js, ToDoList">
-    <meta name="description" content="Vanilla JavaScript Project: ToDoList">
-    <meta name="author" content="fa-bs.github.io">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <link rel="icon"
+            type="image/svg+xml"
+            href="assets/favicon.svg" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta name="robots"
+            content="index, follow">
+        <meta name="keywords"
+            content="HTML, CSS, JavaScript, Vanilla.js, ToDoList">
+        <meta name="description"
+            content="Vanilla JavaScript Project: ToDoList">
+        <meta name="author"
+            content="fa-bs.github.io">
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/script.js" async></script>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+            href="assets/style.css">
 
-    <title>ToDoList</title>
-</head>
+        <title>ToDoList</title>
+    </head>
 
-<body>
-    <h1>ToDoList</h1>
-    <header>
-        <input class="input" type="text" placeholder="Type a Task Here..."
-            autofocus>
-        <button onclick="addTask()" class="btn-add">
-            add
-            <i class="bi bi-plus-circle-fill"></i>
-        </button>
-        <button onclick="saveList()" class="btn-save">
-            save
-            <i class="bi bi-save2-fill"></i>
-        </button>
-    </header>
-    <ul class="main"></ul>
-    <small class="msg fade-in">Congrats, nothing to do... <i
-            class="bi bi-emoji-smile"></i></small>
+    <body>
+        <h1>ToDoList</h1>
 
-</body>
+        <header>
+            <input class="input"
+                type="text"
+                placeholder="Type a Task Here..."
+                autofocus>
+            <button onclick="addTask()"
+                class="btn-add">
+                add
+                <i class="bi bi-plus-circle-fill"></i>
+            </button>
+            <button onclick="saveList()"
+                class="btn-save">
+                save
+                <i class="bi bi-save2-fill"></i>
+            </button>
+        </header>
+        <div class="wrapper-switch">
+            <small>autosave</small>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <ul class="main"></ul>
+        <small class="msg fade-in">Congrats, nothing to do... <i
+                class="bi bi-emoji-smile"></i></small>
+
+
+        <script src="assets/script.js"></script>
+    </body>
 
 </html>

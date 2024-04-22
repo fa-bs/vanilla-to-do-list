@@ -2,8 +2,11 @@ const main = document.querySelector(".main");
 const input = document.querySelector(".input");
 const btnAdd = document.querySelector(".btn-add");
 const btnSave = document.querySelector(".btn-save");
+const switcher = document.querySelector(".switch>input")
 const msg = document.querySelector(".msg")
-// let counter = 0;
+console.log(switcher.checked);
+
+switcher.checked = JSON.parse(localStorage.getItem('autoSave'))
 
 //check localStorage
 if (localStorage.getItem('myList')) {
@@ -13,11 +16,8 @@ if (localStorage.getItem('myList')) {
     }
 }
 
-
-
 function addTask() {
     if (input.value) {
-        // counter++;
         const date = new Date()
         const dateId = date.getTime()
         console.log(dateId);
@@ -32,7 +32,6 @@ function addTask() {
         ${date.toDateString()} • ${date.toLocaleTimeString()}
         </small>
     `
-
         main.prepend(newItem)
         // main.append(newItem)
         input.value = ""
@@ -45,6 +44,8 @@ function addTask() {
             input.classList.remove("input-attn")
         }, 1000);
     }
+    if (switcher.checked) localStorage.setItem('myList', JSON.stringify(main.innerHTML))
+
 
 }
 
@@ -76,6 +77,7 @@ function deleteTask(id) {
     setTimeout(() => {
         task.remove()
         main.classList.add("refresh-itens")
+        if (switcher.checked) localStorage.setItem('myList', JSON.stringify(main.innerHTML))
         setTimeout(() => {
             main.classList.remove("refresh-itens")
         }, 700);
@@ -96,3 +98,7 @@ const saveList = () => {
         btnSave.innerHTML = `save <i class="bi bi-save2-fill" ></i>`
     }, 1000);
 }
+
+switcher.addEventListener('change', () => {
+    localStorage.setItem('autoSave', JSON.stringify(switcher.checked))
+})
