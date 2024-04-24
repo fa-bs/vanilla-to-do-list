@@ -220,7 +220,7 @@ button.btn-save {
     cursor: pointer;
     inset: 0;
     border-radius: 12px;
-    background-color: #a8a8a8;
+    background-color: #716c6b;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -238,9 +238,9 @@ button.btn-save {
     transition: .4s;
 }
 
-.switch input:checked+.slider {
+/* .switch input:checked+.slider {
     background-color: #be7be7;
-}
+} */
 
 .switch input:checked+.slider::before {
     background-color: #7be7de;
